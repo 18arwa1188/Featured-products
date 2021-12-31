@@ -1,0 +1,74 @@
+* {box-sizing: border-box}
+.container {
+    padding: 40px 0px 5px;
+    margin: 10% 20%;
+    border: 1px solid black;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.container div:first-child {
+    color: white;
+    padding: 8px 10px;
+    background-color: #336d7d;
+    position: absolute;
+    top: -3%;
+    left: -1%;
+}
+.container div:not(:first-child) {
+    font-size: 14px;
+    color: #97908b;
+    padding: 1px;
+    border: 5px solid #dddddd; 
+    position: relative;
+    
+}
+.container div:not(:first-child) img {width: 100%}
+
+.container div:not(:first-child) p {
+    margin: 10px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #dddddd;
+}
+.container div:not(:first-child) > span {
+    font-size: 13px;
+    font-weight: 600;
+    color:#336d7d;
+    padding: 0px 8px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 91%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.container div:nth-of-type(3) > span  {color:#bdbebf; font-size: 12px}
+
+.container div:nth-of-type(3) span span {
+    font-size: 13px;
+    color:#e24502;
+    margin-left: 8px;
+}
+.container div:nth-of-type(3)::after {
+    content: "";
+    height: 1px;
+    width: 23%;
+    background-color: #bdbebf;
+    position: absolute;
+    top: 94%;
+    left: 25%;
+}
+.container div:nth-of-type(3)::before {
+    content: "Sale!";
+    height: 35px;
+    width: 35px;
+    font-size: 12px;
+    color: #dddddd;
+    background-color: #e24502;
+    border-radius: 50%;
+    position: absolute;
+    top: -5%;
+    left: -8%;
+    line-height: 290%;
+}
